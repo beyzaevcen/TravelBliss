@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:travel_app/widgets/app_bold_text.dart';
 import 'package:travel_app/widgets/app_text.dart';
+import 'package:travel_app/widgets/responsive_button.dart';
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({super.key});
@@ -38,14 +39,20 @@ class _WelcomePageState extends State<WelcomePage> {
                       const BoldText(text: "Discover "),
                       TextNormal(text: "World", size: 30),
                       const SizedBox(
-                        height: 10,
+                        height: 30,
                       ),
                       SizedBox(
                         width: 250,
                         child: TextNormal(
                             text:
                                 "Discover, plan, and explore with our travel app! Your gateway to unforgettable adventures awaits. Start your journey now!"),
-                      )
+                      ),
+                      const SizedBox(
+                        height: 40,
+                      ),
+                      ResponsiveButton(
+                        width: 250,
+                      ),
                     ],
                   )
                 ],
