@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_app/utils/theme.dart';
 import 'package:travel_app/widgets/app_bold_text.dart';
 import 'package:travel_app/widgets/app_text.dart';
 import 'package:travel_app/widgets/responsive_button.dart';
@@ -32,6 +33,7 @@ class _WelcomePageState extends State<WelcomePage> {
             child: Container(
               margin: const EdgeInsets.only(top: 150, right: 20, left: 20),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -54,7 +56,21 @@ class _WelcomePageState extends State<WelcomePage> {
                         width: 250,
                       ),
                     ],
-                  )
+                  ),
+                  Column(
+                    children: List.generate(3, (indexTwo) {
+                      return Container(
+                        margin: const EdgeInsets.all(4),
+                        height: index == indexTwo ? 30 : 10,
+                        width: 8,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(16),
+                            color: index == indexTwo
+                                ? CColors.mainColor
+                                : CColors.mainColor.withOpacity(0.2)),
+                      );
+                    }),
+                  ),
                 ],
               ),
             ),
