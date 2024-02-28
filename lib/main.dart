@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:travel_app/pages/welcome_page.dart';
+import 'package:travel_app/pages/nav_pages/home_pages.dart';
 import 'package:travel_app/utils/theme.dart';
 
 void main() {
@@ -18,6 +18,6 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: CColors.mainColor),
           useMaterial3: true,
         ),
-        home: const WelcomePage());
+        home: const HomePage());
   }
 }
